@@ -1,0 +1,26 @@
+body {
+    padding-top: 60px;
+}
+
+#week h1 {
+    margin-bottom: 0;
+}
+
+#week h6 {
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+
+.fullday {
+    position: relative;
+    background: #EEE;
+    height: 950px;
+    padding: 1px;
+    background: url(../imgs/daybackground.png);
+    background-position: 0 -1px; 
+}
+
+.fullday .thumbnail {
+    position: absolute;
+    width: 90px;
+}
