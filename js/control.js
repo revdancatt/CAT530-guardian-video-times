@@ -36,6 +36,26 @@ control = {
             }
         );
 
+        $('#sectionFilters input[name=pickSections]').click(function() {
+            if ($(this).val() == 'all') {
+                if ($(this).attr('checked') == 'checked') {
+                    $('#sectionFilters input[name=pickSections]').attr('checked', true);
+                } else {
+                    $('#sectionFilters input[name=pickSections]').attr('checked', false);
+                }
+            }
+
+            //  Turn all the thumbs off, then turn them back on again
+            $('.thumbholder').css('display', 'none');
+            $('#sectionFilters input[name=pickSections]').each(function(i, el) {
+                if ($(el).attr('checked') === 'checked') {
+                    $('.fullday .section_' + $(el).val()).css('display', 'inline');
+                }
+                
+            });
+
+        });
+
 	},
 
     //  this is going to start at the first day and loop over until
@@ -142,6 +162,8 @@ control = {
                 }
             });
         }, 1000);
+
+        $('#sectionFilters').fadeIn(666);
     }
 
 };

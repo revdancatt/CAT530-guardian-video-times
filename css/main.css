@@ -73,6 +73,27 @@ body {
     box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 0px rgba(0, 0, 0, 0.2);
 }
 
+#sectionFilters {
+    display: none;
+}
+
+#sectionFilters.well {
+    padding: 4px;
+    padding-top: 8px;
+}
+
+#sectionFilters label span {
+    font-family: "Quantico", cursive;
+    font-size: 11px;
+    line-height: 11px;    
+}
+
+#sectionFilters hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #CCC;
+}
+
 .section_fashion { background: #FFC202; }
 .section_networkukprod { background: #333333; }
 .section_money { background: #8F1AB6; }
