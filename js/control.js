@@ -61,7 +61,7 @@ control = {
 
         var fromdate = (control.startOfWeek.getYear() + 1900) + '-' + (control.startOfWeek.getMonth()+1) + '-' + control.startOfWeek.getDate();
         var todate = (control.endOfWeek.getYear() + 1900) + '-' + (control.endOfWeek.getMonth()+1) + '-' + control.endOfWeek.getDate();
-        $.getJSON('http://content.guardianapis.com/search?page=' + control.page + '&tag=type/video&from-date=' + fromdate + '&to-date=' + todate + '&order-by=oldest&format=json&show-fields=shortUrl,thumbnail&callback=?',
+        $.getJSON('http://content.guardianapis.com/search?page=' + control.page + '&tag=type/video&from-date=' + fromdate + '&to-date=' + todate + '&show-tags=series&order-by=oldest&format=json&show-fields=shortUrl,thumbnail&callback=?',
             //  TODO: add error checking to this response
             function(json) {
                 for (var i in json.response.results) {
@@ -77,7 +77,7 @@ control = {
                     if (json.response.total == 1) {
                         $('#currentaction h1').html('Done, 1 video');
                     } else {
-                        $('#currentaction h1').html('Done, ' + json.response.total + ' videos');
+                        control.finishPlotting();
                     }
                 }
 
@@ -108,13 +108,40 @@ control = {
         } else {
             todpos=parseInt(tod/4,10);
         }
+        todpos+=15;
 
         //  Now we know the day and the time of day, we can add the thumbnail onto the page
+        var th = $('<div>').addClass('thumbholder').addClass('section_' + json.sectionId).css('top', todpos-12);
+        var dtime = $('<div>').addClass('time').addClass('tinyfont').html(d[0] + ':' + d[1]);
+        var dsection = $('<div>').addClass('sectionname').addClass('tinyfont').html(json.sectionName);
         var i = $('<img>').addClass('thumbnail').attr('src', json.fields.thumbnail).attr('title', d[0] + ':' + d[1]);
-        i.css('top', todpos);
-        $($('#week .dayholder')[dow.getDay()]).children('.fullday').append(i);
+
+        if (json.tags.length > 0) {
+            var dseries = $('<div>').addClass('series').addClass('tinyfont').html('series');
+            th.append(dseries);
+        }
+
+        th.append(dtime);
+        th.append(i);
+        th.append(dsection);
+
+        $($('#week .dayholder')[dow.getDay()]).children('.fullday').append(th);
+        i.attr('style', '');
 
 
+    },
+
+    finishPlotting: function() {
+        $('#currentaction h1').html('Done');
+        $('#currentaction').slideUp('slow');
+
+        setTimeout(function() {
+            $('.thumbnail').each(function(i, el) {
+                if ($(el).css('display') == 'none') {
+                    $(el).parent().remove();
+                }
+            });
+        }, 1000);
     }
 
 };

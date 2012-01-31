@@ -14,13 +14,104 @@ body {
 .fullday {
     position: relative;
     background: #EEE;
-    height: 950px;
+    height: 965px;
     padding: 1px;
     background: url(../imgs/daybackground.png);
     background-position: 0 -1px; 
 }
 
-.fullday .thumbnail {
+.thumbholder {
     position: absolute;
-    width: 90px;
+    width: 96px;
+    background: #999999;
+    color: white;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    -webkit-box-shadow:inset 1px 1px 0px rgba(255, 255, 255, 0.5), inset -1px -1px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:inset 1px 1px 0px rgba(255, 255, 255, 0.5), inset -1px -1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow:inset 1px 1px 0px rgba(255, 255, 255, 0.5), inset -1px -1px 0px rgba(0, 0, 0, 0.2);
 }
+
+.tinyfont {
+    font-family: "Quantico", cursive;
+    font-size: 8px;
+    line-height: 8px;
+    font-weight: 700;
+}
+
+.fullday .thumbholder .time {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+}
+
+.fullday .thumbholder .series {
+    position: absolute;
+    top: 1px;
+    right: 3px;
+}
+
+.fullday .thumbholder .sectionname {
+    position: absolute;
+    bottom: 1px;
+    left: 3px;
+}
+
+.section_lifeandstyle .tinyfont {
+    color: black;
+}
+
+.fullday .thumbnail {
+    width: 90px;
+    height: 54px;
+    margin-left: 3px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5),-1px -1px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.section_fashion { background: #FFC202; }
+.section_networkukprod { background: #333333; }
+.section_money { background: #8F1AB6; }
+.section_society { background: #801100; }
+.section_books { background: #D1008B; }
+.section_world { background: #D61D00; }
+.section_politics { background: #801100; }
+.section_sport { background: #008000; }
+.section_technology { background: #801100; }
+.section_film { background: #D1008B; }
+.section_higher-education-network { background: #0363A8; }
+.section_education { background: #801100; }
+.section_mobilenet { background: #333333; }
+.section_media { background: #801100; }
+.section_travel { background: #65C5FB; }
+.section_public-leaders-network { background: #B51D5D; }
+.section_environment { background: #7BBB00; }
+.section_voluntary-sector-network { background: #FFB200; }
+.section_music { background: #D1008B; }
+.section_global-development { background: #801100; }
+.section_childrens-books-site { background: #D1008B; }
+.section_commentisfree { background: #0061A6; }
+.section_healthcare-network { background: #0363A8; }
+.section_business { background: #4A64D9; }
+.section_artanddesign { background: #D1008B; }
+.section_tv-and-radio { background: #D1008B; }
+.section_football { background: #006000; }
+.section_social-care-network { background: #0061A6; }
+.section_lifeandstyle { background: #FFC202; }
+.section_news { background: #D61D00; }
+.section_law { background: #801100; }
+.section_local-government-network { background: #993399; }
+.section_stage { background: #D1008B; }
+.section_housing-network { background: #993399; }
+.section_culture { background: #D1008B; }
+.section_science { background: #801100; }
+.section_uk { background: #D61D00; }
+.section_social-enterprise-network { background: #FFB200; }
+.section_networkusprod { background: #333333; }
+.section_government-computing-network { background: #00513B; }
+.section_sustainablebusiness { background: #0061A6; }
+
