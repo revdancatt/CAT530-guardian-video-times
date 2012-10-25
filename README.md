@@ -5,8 +5,8 @@ Quick hack on the Guardian API to work out how many videos are published by the 
 
 Only tested on Chrome.
 
-+   code: https://github.com/revdancatt/Guardian-Video-Times
-+   running: http://revdancatt.github.com/Guardian-Video-Times/
++   code: https://github.com/revdancatt/CAT530-guardian-video-times
++   running: http://revdancatt.github.com/CAT530-guardian-video-times/
 
 ToDo
 ====
