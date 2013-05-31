@@ -1,3 +1,5 @@
+![Screen Shot](http://cattopus23.com/img/panel-CAT530.png)
+
 Guardian Video Times
 ====================
 
@@ -5,8 +7,7 @@ Quick hack on the Guardian API to work out how many videos are published by the 
 
 Only tested on Chrome.
 
-+   code: https://github.com/revdancatt/CAT530-guardian-video-times
-+   running: http://revdancatt.github.com/CAT530-guardian-video-times/
++   Running: http://revdancatt.github.com/CAT530-guardian-video-times/
 
 ToDo
 ====
