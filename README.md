@@ -1,7 +1,7 @@
 ![Screen Shot](http://cattopus23.com/img/panel-CAT530.png)
 
-Guardian Video Times
-====================
+CAT530 Guardian Video Times
+===========================
 
 Quick hack on the Guardian API to work out how many videos are published by the Guardian and *when*.
 
